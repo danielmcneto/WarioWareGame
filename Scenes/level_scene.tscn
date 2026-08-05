@@ -1,3 +1,62 @@
 [gd_scene format=3 uid="uid://cfcwfs3n2sg2j"]
 
+[ext_resource type="Script" uid="uid://u3hu4nnbuw3m" path="res://Scenes/timer_scene.gd" id="1_cn3xy"]
+[ext_resource type="Texture2D" uid="uid://dmxonpvq2xm8" path="res://icon.svg" id="1_rol8n"]
+
 [node name="level_scene" type="Node2D" unique_id=1184709649]
+script = ExtResource("1_cn3xy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=723656715]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(9.026687, 5.0668664)
+texture = ExtResource("1_rol8n")
+
+[node name="LiveContainer" type="HBoxContainer" parent="." unique_id=431374217]
+offset_left = 252.0
+offset_top = 146.0
+offset_right = 908.0
+offset_bottom = 274.0
+alignment = 1
+
+[node name="Live" type="TextureRect" parent="LiveContainer" unique_id=136043102]
+layout_mode = 2
+texture = ExtResource("1_rol8n")
+
+[node name="Live2" type="TextureRect" parent="LiveContainer" unique_id=1334517376]
+layout_mode = 2
+texture = ExtResource("1_rol8n")
+
+[node name="Live3" type="TextureRect" parent="LiveContainer" unique_id=878442855]
+layout_mode = 2
+texture = ExtResource("1_rol8n")
+
+[node name="Live4" type="TextureRect" parent="LiveContainer" unique_id=627304001]
+layout_mode = 2
+texture = ExtResource("1_rol8n")
+
+[node name="Live5" type="TextureRect" parent="LiveContainer" unique_id=2128774617]
+layout_mode = 2
+texture = ExtResource("1_rol8n")
+
+[node name="LevelCounter" type="RichTextLabel" parent="." unique_id=1553640719]
+offset_left = 379.0
+offset_top = 298.0
+offset_right = 734.0
+offset_bottom = 397.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 40
+text = "LEVEL counter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=488626885]
+offset_left = 386.0
+offset_top = 382.0
+offset_right = 741.0
+offset_bottom = 481.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 40
+text = "timer:33333"
+horizontal_alignment = 1
+vertical_alignment = 1
