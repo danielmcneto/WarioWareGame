@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b0ik7e6veito1"]
+
+[ext_resource type="Script" uid="uid://7sae2vwcyx31" path="res://ThemedTimer.gd" id="1_moll0"]
+
+[node name="ThemedTimer" type="Node2D" unique_id=283485511]
+script = ExtResource("1_moll0")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=2111491682]
+offset_left = 458.0
+offset_top = 6.0
+offset_right = 814.0
+offset_bottom = 93.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 60
+text = "dadada"
+horizontal_alignment = 1
+vertical_alignment = 1

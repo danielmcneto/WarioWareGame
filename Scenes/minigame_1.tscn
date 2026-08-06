@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://drjnwodke0q5r"]
+
+[ext_resource type="Texture2D" uid="uid://ca116n8ci30fm" path="res://sprites/bomb.png" id="1_enoba"]
+[ext_resource type="Script" uid="uid://d2wnj5ribqip7" path="res://Scenes/parent.gd" id="1_o6yob"]
+[ext_resource type="Texture2D" uid="uid://dkhedt0g8xu5g" path="res://sprites/backgroundMinigame2.png" id="2_0uv5o"]
+[ext_resource type="PackedScene" uid="uid://b0ik7e6veito1" path="res://Scenes/themed_timer.tscn" id="2_11mgy"]
+[ext_resource type="Script" uid="uid://cs3drqe7t17mh" path="res://Scenes/bomb.gd" id="2_f6tb2"]
+[ext_resource type="Shader" uid="uid://bqa7u4bssvwpk" path="res://Scenes/background.gdshader" id="5_0uv5o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jmcek"]
+shader = ExtResource("5_0uv5o")
+
+[node name="Minigame_1" type="Node2D" unique_id=811675000]
+
+[node name="background" type="TextureRect" parent="." unique_id=1466427636]
+z_index = -11
+z_as_relative = false
+texture_repeat = 2
+material = SubResource("ShaderMaterial_jmcek")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.9999695
+offset_top = -23.999985
+offset_right = 497.00003
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.4, 2.3935006)
+texture = ExtResource("2_0uv5o")
+stretch_mode = 1
+
+[node name="parent" type="Node2D" parent="." unique_id=1375813525]
+script = ExtResource("1_o6yob")
+
+[node name="ThemedTimer" parent="parent" unique_id=283485511 instance=ExtResource("2_11mgy")]
+position = Vector2(-2, -3)
+
+[node name="bomb" type="TextureButton" parent="parent" unique_id=500613901]
+offset_left = 956.0
+offset_top = 442.0
+offset_right = 1074.0
+offset_bottom = 574.0
+texture_normal = ExtResource("1_enoba")
+script = ExtResource("2_f6tb2")
+
+[node name="bomb2" type="TextureButton" parent="parent" unique_id=1940736083]
+offset_left = 761.0
+offset_top = 158.0
+offset_right = 879.0
+offset_bottom = 290.0
+texture_normal = ExtResource("1_enoba")
+script = ExtResource("2_f6tb2")
+
+[node name="bomb3" type="TextureButton" parent="parent" unique_id=1653851924]
+offset_left = 584.0
+offset_top = 338.0
+offset_right = 702.0
+offset_bottom = 470.0
+texture_normal = ExtResource("1_enoba")
+script = ExtResource("2_f6tb2")
+
+[node name="bomb4" type="TextureButton" parent="parent" unique_id=249268132]
+offset_left = 104.0
+offset_top = 478.0
+offset_right = 222.0
+offset_bottom = 610.0
+texture_normal = ExtResource("1_enoba")
+script = ExtResource("2_f6tb2")
+
+[node name="bomb5" type="TextureButton" parent="parent" unique_id=1429667577]
+offset_left = 411.0
+offset_top = 364.0
+offset_right = 529.0
+offset_bottom = 496.0
+texture_normal = ExtResource("1_enoba")
+script = ExtResource("2_f6tb2")
+
+[connection signal="pressed" from="parent/bomb" to="parent/bomb" method="_on_pressed"]
+[connection signal="pressed" from="parent/bomb2" to="parent/bomb2" method="_on_pressed"]
+[connection signal="pressed" from="parent/bomb3" to="parent/bomb3" method="_on_pressed"]
+[connection signal="pressed" from="parent/bomb4" to="parent/bomb4" method="_on_pressed"]
+[connection signal="pressed" from="parent/bomb5" to="parent/bomb5" method="_on_pressed"]
