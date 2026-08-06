@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyb7oi14ebt0w"]
 
-[ext_resource type="Script" uid="uid://waqq73n4dp6n" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="Script" uid="uid://waqq73n4dp6n" path="res://scripts/title_screen.gd" id="1_p3fck"]
 [ext_resource type="Texture2D" uid="uid://b0jmn3iw5pq5k" path="res://sprites/menu.png" id="2_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://d1tubqendoftn" path="res://sprites/start.png" id="3_twnyg"]
 [ext_resource type="Texture2D" uid="uid://d0kh5605m72ju" path="res://sprites/settings.png" id="4_55kwv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c27nppt4i8okr" path="res://sprites/quit.png" id="4_twnyg"]
 [ext_resource type="Texture2D" uid="uid://bfc1idk4q721o" path="res://sprites/settingsH.png" id="6_0061g"]
 [ext_resource type="Texture2D" uid="uid://c451el0i2voq" path="res://sprites/quitH.png" id="8_8mikk"]
+[ext_resource type="AudioStream" uid="uid://djptsv1ylh538" path="res://sounds/select.wav" id="9_0061g"]
 
 [node name="TitleScreen" type="Node2D" unique_id=889045938]
 script = ExtResource("1_p3fck")
@@ -46,6 +47,9 @@ texture_hover = ExtResource("6_0061g")
 layout_mode = 2
 texture_normal = ExtResource("4_twnyg")
 texture_hover = ExtResource("8_8mikk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1024228862]
+stream = ExtResource("9_0061g")
 
 [connection signal="pressed" from="VBoxContainer/SartButton" to="." method="_on_sart_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

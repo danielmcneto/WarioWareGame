@@ -2,6 +2,7 @@ extends Node2D
 @onready var left: Node2D = $left
 @onready var right: Node2D = $right
 @onready var smack_zone: Area2D = $zone
+@onready var sfx = $AudioStreamPlayer2D
 
 @onready var themed_timer: Node2D = $"../ThemedTimer"
 @onready var hit_effect: Sprite2D = $"../hitEffect"
@@ -54,6 +55,7 @@ func _smack() -> void:
 		.set_ease(Tween.EASE_OUT)
 	
 	tween.tween_callback(func(): hit_effect.visible = true)
+	tween.tween_callback(sfx.play)
 	tween.tween_callback(_check_hit)
 	# open hand
 	tween.tween_property(left, "position:x", 145.0, 0.2)\

@@ -13,9 +13,10 @@ var time
 func _ready() -> void:
 	await Timer(5.0) # using the function created
 	
-	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
+	if Global.minigames_done < 10: # if you havent completed 3 minigames yet 
 		Global.minigames_done = Global.minigames_done +1
-		var i = RandomNumberGenerator.new().randi_range(1,2)
+		var i = RandomNumberGenerator.new().randi_range(1,3)
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(i) + ".tscn") # changes your scene by arranging this frankenstein path. 
 # Above, your script is being told to go to the next minigame. If the 
 # current minigame is Level 1, then you would be on minigame 1. If you 

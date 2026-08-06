@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://darm2qdl0xpa4"]
 
-[ext_resource type="Script" uid="uid://bmvnblsgacgf5" path="res://Scenes/mosquito.gd" id="1_he4ew"]
+[ext_resource type="Script" uid="uid://bmvnblsgacgf5" path="res://scripts/mosquito.gd" id="1_he4ew"]
 [ext_resource type="Texture2D" uid="uid://blnb8ec2opd40" path="res://sprites/mosquito3.png" id="2_l4g8r"]
-[ext_resource type="Script" uid="uid://dmiunedihrrro" path="res://Scenes/hands.gd" id="3_dfb65"]
+[ext_resource type="Script" uid="uid://dmiunedihrrro" path="res://scripts/hands.gd" id="3_dfb65"]
 [ext_resource type="Texture2D" uid="uid://2gwnjm8q4e5" path="res://sprites/hand.png" id="3_l4g8r"]
+[ext_resource type="AudioStream" uid="uid://cnxb5ljc5700e" path="res://sounds/Boom.wav" id="5_cqly6"]
 [ext_resource type="Texture2D" uid="uid://chgliq0pgcoov" path="res://sprites/Sprite-0003.png" id="5_mmgun"]
 [ext_resource type="PackedScene" uid="uid://b0ik7e6veito1" path="res://Scenes/themed_timer.tscn" id="5_rfxq2"]
 [ext_resource type="Shader" uid="uid://bqa7u4bssvwpk" path="res://Scenes/background.gdshader" id="7_cqly6"]
@@ -54,6 +55,9 @@ position = Vector2(592, -441)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hands/zone" unique_id=96316468]
 position = Vector2(1, 12)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="hands" unique_id=866268273]
+stream = ExtResource("5_cqly6")
 
 [node name="hitEffect" type="Sprite2D" parent="." unique_id=324901011]
 position = Vector2(592, -441)
