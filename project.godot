@@ -13,7 +13,6 @@ config_version=5
 config/name="WarioWareGame"
 run/main_scene="uid://dyb7oi14ebt0w"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
