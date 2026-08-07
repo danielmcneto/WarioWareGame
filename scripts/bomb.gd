@@ -2,8 +2,12 @@ extends TextureButton
 @onready var parent = $".."
 @onready var sfx = $"../AudioStreamPlayer2D"
 
-var randomX = RandomNumberGenerator.new().randi_range(85, 935)
-var randomY = RandomNumberGenerator.new().randi_range(140, 445)
+var randomX = randi_range(85, 935)
+var randomY = randi_range(140, 445)
+
+func _ready() -> void:
+	randomize() # Prepara a semente aleatória global do jogo
+
 func _init() -> void:
 	position.x = randomX
 	position.y = randomY

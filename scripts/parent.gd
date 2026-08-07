@@ -14,7 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if buttons_pressed == 5:
 		WinSfx.playWinSFX()
-		Trasition.change_scene("res://Scenes/level_scene.tscn")
+		Trasition.change_scene("res://Scenes/win_scene.tscn")
 	
 	if timer_end:
 		Global.lives -= 1

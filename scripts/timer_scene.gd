@@ -20,7 +20,7 @@ func _ready() -> void:
 	
 	Global.lastMinigame = i
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	Trasition.change_scene("res://scenes/minigame_" + str(i) + ".tscn") # changes your scene by arranging this frankenstein path. 
+	Trasition.change_scene("res://Scenes/minigame_" + str(i) + ".tscn") # changes your scene by arranging this frankenstein path. 
 	
 # Above, your script is being told to go to the next minigame. If the 
 # current minigame is Level 1, then you would be on minigame 1. If you 

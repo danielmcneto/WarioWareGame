@@ -49,7 +49,7 @@ func _check_hit() -> void:
 func _check_win() -> void:
 	if hited:
 		WinSfx.playWinSFX()
-		Trasition.change_scene("res://Scenes/level_scene.tscn")
+		Trasition.change_scene("res://Scenes/win_scene.tscn")
 	
 func _smack() -> void:
 	var tween = get_tree().create_tween()
