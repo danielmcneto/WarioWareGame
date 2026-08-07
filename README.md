@@ -23,6 +23,6 @@ A fast-paced Arcade game inspired by WarioWare where players must clear three ra
 ## How to Play
 
 ### Play in Browser / Download
-1. Visit the **[itch.io page](https://itch.io)**.
+1. Visit the **[itch.io page](https://ehodan.itch.io/5-second-panic)**.
 2. Click **Run Game** to play directly in your browser, or download the build for your OS.
 3. Use only your mouse to play.
