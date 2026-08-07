@@ -2,9 +2,9 @@
 
 A fast-paced Arcade game inspired by WarioWare where players must clear three randomly selected microgames under an tiny time limit.
 
-![5-Second Panic Gameplay](imagem.gif)
+![5-Second Panic Gameplay](imagem.png)
 
-**[🎮 Play 5-Second Panic on itch.io](https://itch.io)**
+**[🎮 Play 5-Second Panic on itch.io](https://ehodan.itch.io/5-second-panic)**
 
 ---
 
