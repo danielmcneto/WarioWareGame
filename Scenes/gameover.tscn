@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://x62r4rvg7kq6"]
+
+[ext_resource type="Texture2D" uid="uid://bjxaoa7c5hjia" path="res://sprites/gameover.png" id="1_6kwjr"]
+[ext_resource type="Script" uid="uid://cbaa5kqutw7ev" path="res://Scenes/gameover.gd" id="1_bb3cs"]
+[ext_resource type="AudioStream" uid="uid://djptsv1ylh538" path="res://sounds/select.wav" id="2_a57xw"]
+[ext_resource type="Texture2D" uid="uid://drhh21g1t6ior" path="res://sprites/tryagainbutton.png" id="2_bb3cs"]
+[ext_resource type="Texture2D" uid="uid://cwtt4aj42ohul" path="res://sprites/tryagainbuttonH.png" id="3_a57xw"]
+[ext_resource type="Texture2D" uid="uid://kl45ij243oe7" path="res://sprites/mainmenubutton.png" id="4_qjy16"]
+[ext_resource type="Texture2D" uid="uid://cpdrdq5xpm2fa" path="res://sprites/mainmenubuttonH.png" id="5_26hfm"]
+
+[node name="Gameover" type="Node2D" unique_id=567701376]
+script = ExtResource("1_bb3cs")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=928042146]
+position = Vector2(399.99997, 168)
+scale = Vector2(2.400001, 2.4000003)
+stream = ExtResource("2_a57xw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1374132068]
+offset_right = 480.0
+offset_bottom = 270.0
+scale = Vector2(2.4000015, 2.3999999)
+texture = ExtResource("1_6kwjr")
+
+[node name="TryagainButton" type="TextureButton" parent="." unique_id=1167494782]
+offset_left = 400.0
+offset_top = 168.0
+offset_right = 536.0
+offset_bottom = 212.0
+scale = Vector2(2.4000013, 2.4000006)
+texture_normal = ExtResource("2_bb3cs")
+texture_hover = ExtResource("3_a57xw")
+
+[node name="MainmenuButton" type="TextureButton" parent="." unique_id=1460093060]
+offset_left = 390.0
+offset_top = 271.0
+offset_right = 541.0
+offset_bottom = 315.0
+scale = Vector2(2.4000013, 2.4000006)
+texture_normal = ExtResource("4_qjy16")
+texture_hover = ExtResource("5_26hfm")
+
+[node name="Score" type="RichTextLabel" parent="." unique_id=1929260722]
+offset_left = 352.0
+offset_top = 77.0
+offset_right = 708.0
+offset_bottom = 164.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 60
+text = "SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TryagainButton" to="." method="_on_tryagain_button_pressed"]
+[connection signal="pressed" from="MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

@@ -7,6 +7,7 @@ extends Node2D
 @onready var themed_timer: Node2D = $"../ThemedTimer"
 @onready var hit_effect: Sprite2D = $"../hitEffect"
 
+
 var hited = false
 var timer_end = false
 
@@ -19,7 +20,8 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		hit_effect.position.y = smack_zone.global_position.y
-		_smack()
+		if !hited:
+			_smack()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -28,8 +30,13 @@ func _process(delta: float) -> void:
 	
 	if timer_end:
 		Global.lives -= 1
-		Global.minigames_done -=1
-		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+		if Global.lives == -1:
+			MusicManager.playGameOverMusic()
+			Trasition.change_scene("res://Scenes/gameover.tscn")
+		else:
+			Global.minigames_done -=1
+			LoseSfx.playLoseSFX()
+			Trasition.change_scene("res://Scenes/level_scene.tscn")
 
 func _check_hit() -> void:
 	var mosquitos = smack_zone.get_overlapping_areas()
@@ -41,7 +48,8 @@ func _check_hit() -> void:
 	
 func _check_win() -> void:
 	if hited:
-		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+		WinSfx.playWinSFX()
+		Trasition.change_scene("res://Scenes/level_scene.tscn")
 	
 func _smack() -> void:
 	var tween = get_tree().create_tween()
@@ -66,7 +74,8 @@ func _smack() -> void:
 		.set_ease(Tween.EASE_OUT)
 	tween.tween_interval(0.1)
 	tween.tween_callback(func(): hit_effect.visible = false)
-	tween.tween_interval(0.4)
+	tween.tween_interval(0.5)
+	
 	tween.tween_callback(_check_win)
 	
 	

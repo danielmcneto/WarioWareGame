@@ -19,6 +19,8 @@ func _on_quit_button_pressed() -> void:
 
 func _on_sart_button_pressed() -> void:
 	sfx.play()
+	Global.lives = 5
 	await sfx.finished
-	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+	MusicManager.playGameMusic()
+	Trasition.change_scene("res://Scenes/level_scene.tscn")
 	Global.minigames_done = 1

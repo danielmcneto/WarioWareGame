@@ -8,24 +8,25 @@ extends Node2D
 @onready var level_counter: RichTextLabel = $LevelCounter
 @onready var timer: RichTextLabel = $Timer
 
-var time
+@onready var time = 0
 
 func _ready() -> void:
-	await Timer(5.0) # using the function created
+	await Timer(1) # using the function created
 	
-	if Global.minigames_done < 10: # if you havent completed 3 minigames yet 
-		Global.minigames_done = Global.minigames_done +1
-		var i = RandomNumberGenerator.new().randi_range(1,3)
-		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-		get_tree().change_scene_to_file("res://scenes/minigame_" + str(i) + ".tscn") # changes your scene by arranging this frankenstein path. 
+	Global.minigames_done = Global.minigames_done +1
+	var i = RandomNumberGenerator.new().randi_range(1,3)
+	while i == Global.lastMinigame:
+		i = RandomNumberGenerator.new().randi_range(1,3)
+	
+	Global.lastMinigame = i
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	Trasition.change_scene("res://scenes/minigame_" + str(i) + ".tscn") # changes your scene by arranging this frankenstein path. 
+	
 # Above, your script is being told to go to the next minigame. If the 
 # current minigame is Level 1, then you would be on minigame 1. If you 
 # complete that level, you have the minigames_done add one, and then you 
 # look for the scene titled `minigame_` and then whatever minigame number 
 # should be next. Make sure you name your minigame saves appropriately.
-
-	else:
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn") # changes your scene
 	
 
 func _process(delta: float) -> void: # runs EVERY FRAME
@@ -49,6 +50,8 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 			live_4.hide()
 		0:
 			live_container.hide() # just hides everything
+		-1:
+			Trasition.change_scene("res://Scenes/gameover.tscn")
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level_counter.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)

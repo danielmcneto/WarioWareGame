@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://cmucol5v28rti"
+Trasition="*uid://2cq8cwd1s4p8"
+WinSfx="*uid://cuoormyex0g45"
+LoseSfx="*uid://c2k7wtewt2y61"
+MusicManager="*uid://clof3bpxiidpv"
 
 [display]
 

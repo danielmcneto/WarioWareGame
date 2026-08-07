@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://clof3bpxiidpv"]
+
+[ext_resource type="Script" uid="uid://b1eylqwnke5qx" path="res://music_manager.gd" id="1_sdmu8"]
+[ext_resource type="AudioStream" uid="uid://k2ot3nrykpyy" path="res://sounds/Juhani Junkala [Chiptune Adventures] WAV/Juhani Junkala [Chiptune Adventures] 4. Stage Select.wav" id="2_sdmu8"]
+[ext_resource type="AudioStream" uid="uid://b2hxlf5s287ip" path="res://sounds/Juhani Junkala [Chiptune Adventures] WAV/Juhani Junkala [Chiptune Adventures] 1. Stage 1.wav" id="3_sdmu8"]
+[ext_resource type="AudioStream" uid="uid://8i3o5qvognwh" path="res://sounds/Juhani Junkala [Chiptune Adventures] WAV/Juhani Junkala [Chiptune Adventures] 3. Boss Fight.wav" id="4_b40f5"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_sdmu8"]
+stream_count = 3
+stream_0/stream = ExtResource("2_sdmu8")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("3_sdmu8")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("4_b40f5")
+stream_2/volume = 0.0
+
+[node name="MusicManager" type="Node2D" unique_id=257198457]
+script = ExtResource("1_sdmu8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=368021797]
+stream = SubResource("AudioStreamSynchronized_sdmu8")
+volume_db = -30.0

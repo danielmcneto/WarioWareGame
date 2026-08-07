@@ -1,5 +1,5 @@
 extends Area2D
-@onready var max_vel = 3000
+@onready var max_vel = 1000 * Global.minigames_done
 @onready var smooth = 2
 
 @onready var screen_size = get_viewport_rect().size

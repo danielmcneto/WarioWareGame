@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2k7wtewt2y61"]
+
+[ext_resource type="Script" uid="uid://cd23oiiagrv6g" path="res://Scenes/lose_sfx.gd" id="1_bqh0t"]
+[ext_resource type="AudioStream" uid="uid://cvonb5sfdo3tu" path="res://sounds/floraphonic-classic-game-action-negative-18-224576.mp3" id="1_kbbvk"]
+
+[node name="loseSFX" type="Node2D" unique_id=665431339]
+script = ExtResource("1_bqh0t")
+
+[node name="AudioStreamLose" type="AudioStreamPlayer2D" parent="." unique_id=207462927]
+stream = ExtResource("1_kbbvk")

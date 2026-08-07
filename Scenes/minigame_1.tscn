@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ca116n8ci30fm" path="res://sprites/bomb.png" id="1_enoba"]
 [ext_resource type="Script" uid="uid://d2wnj5ribqip7" path="res://scripts/parent.gd" id="1_o6yob"]
-[ext_resource type="Texture2D" uid="uid://dkhedt0g8xu5g" path="res://sprites/backgroundMinigame2.png" id="2_0uv5o"]
 [ext_resource type="PackedScene" uid="uid://b0ik7e6veito1" path="res://Scenes/themed_timer.tscn" id="2_11mgy"]
 [ext_resource type="Script" uid="uid://cs3drqe7t17mh" path="res://scripts/bomb.gd" id="2_f6tb2"]
+[ext_resource type="Texture2D" uid="uid://bxcqgqdvhr28n" path="res://sprites/backgroundMinigame.png" id="2_ojqsy"]
 [ext_resource type="Shader" uid="uid://bqa7u4bssvwpk" path="res://Scenes/background.gdshader" id="5_0uv5o"]
 [ext_resource type="AudioStream" uid="uid://dm3aurdqr5j26" path="res://sounds/bombSelect.wav" id="7_ojqsy"]
 
@@ -28,7 +28,7 @@ offset_bottom = 294.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.4, 2.3935006)
-texture = ExtResource("2_0uv5o")
+texture = ExtResource("2_ojqsy")
 stretch_mode = 1
 
 [node name="parent" type="Node2D" parent="." unique_id=1375813525]
