@@ -24,3 +24,8 @@ func _on_sart_button_pressed() -> void:
 	MusicManager.playGameMusic()
 	Trasition.change_scene("res://Scenes/level_scene.tscn")
 	Global.minigames_done = 1
+
+
+func _on_setting_button_pressed() -> void:
+	sfx.play()
+	Trasition.change_scene("res://Scenes/settings.tscn")

@@ -12,13 +12,13 @@ shader = ExtResource("2_2tg22")
 script = ExtResource("1_knexo")
 
 [node name="text" type="RichTextLabel" parent="." unique_id=425972176]
-offset_left = 390.0
-offset_top = 24.0
-offset_right = 745.0
-offset_bottom = 123.0
+offset_left = 312.0
+offset_top = 28.0
+offset_right = 825.0
+offset_bottom = 127.0
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/normal_font_size = 40
-text = "You did it
+text = "You won the minigame
 "
 horizontal_alignment = 1
 vertical_alignment = 1

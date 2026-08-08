@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://qeyycsl7sxu7"]
+
+[ext_resource type="Texture2D" uid="uid://kl45ij243oe7" path="res://sprites/mainmenubutton.png" id="1_aaqfp"]
+[ext_resource type="Shader" uid="uid://bqa7u4bssvwpk" path="res://Scenes/background.gdshader" id="1_i44u3"]
+[ext_resource type="Script" uid="uid://xh6otf67hr31" path="res://Scenes/settings.gd" id="1_j2dne"]
+[ext_resource type="Texture2D" uid="uid://cpdrdq5xpm2fa" path="res://sprites/mainmenubuttonH.png" id="2_j2dne"]
+[ext_resource type="Texture2D" uid="uid://dt8v6kml32fiv" path="res://sprites/backgroundMinigameIntermission.png" id="2_lhmql"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aaqfp"]
+shader = ExtResource("1_i44u3")
+
+[node name="settings" type="Node2D" unique_id=68466629]
+script = ExtResource("1_j2dne")
+
+[node name="background" type="TextureRect" parent="." unique_id=1673874275]
+z_index = -11
+z_as_relative = false
+texture_repeat = 2
+material = SubResource("ShaderMaterial_aaqfp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.9999695
+offset_top = -23.999985
+offset_right = 497.00003
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.4, 2.3935006)
+texture = ExtResource("2_lhmql")
+stretch_mode = 1
+
+[node name="MainmenuButton" type="TextureButton" parent="." unique_id=214129896]
+offset_left = 448.0
+offset_top = 475.0
+offset_right = 599.0
+offset_bottom = 519.0
+scale = Vector2(2.4000013, 2.4000006)
+texture_normal = ExtResource("1_aaqfp")
+texture_hover = ExtResource("2_j2dne")
+
+[node name="text" type="RichTextLabel" parent="." unique_id=2025236169]
+offset_left = 371.0
+offset_top = 274.0
+offset_right = 884.0
+offset_bottom = 373.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 40
+text = "There's none :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

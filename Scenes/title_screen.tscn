@@ -52,4 +52,5 @@ texture_hover = ExtResource("8_8mikk")
 stream = ExtResource("9_0061g")
 
 [connection signal="pressed" from="VBoxContainer/SartButton" to="." method="_on_sart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

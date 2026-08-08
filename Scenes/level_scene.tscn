@@ -11,6 +11,17 @@ shader = ExtResource("2_2fcgv")
 [node name="level_scene" type="Node2D" unique_id=1184709649]
 script = ExtResource("1_cn3xy")
 
+[node name="text" type="RichTextLabel" parent="." unique_id=1968731357]
+offset_left = 345.0
+offset_top = 28.999998
+offset_right = 858.0
+offset_bottom = 128.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 40
+text = "You lost the minigame"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="background" type="TextureRect" parent="." unique_id=1852951261]
 z_index = -11
 z_as_relative = false
