@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://kl45ij243oe7" path="res://sprites/mainmenubutton.png" id="1_aaqfp"]
 [ext_resource type="Shader" uid="uid://bqa7u4bssvwpk" path="res://Scenes/background.gdshader" id="1_i44u3"]
 [ext_resource type="Script" uid="uid://xh6otf67hr31" path="res://Scenes/settings.gd" id="1_j2dne"]
+[ext_resource type="Script" uid="uid://0h8cy0yw4t58" path="res://Scenes/h_slider.gd" id="2_6kysc"]
 [ext_resource type="Texture2D" uid="uid://cpdrdq5xpm2fa" path="res://sprites/mainmenubuttonH.png" id="2_j2dne"]
 [ext_resource type="Texture2D" uid="uid://dt8v6kml32fiv" path="res://sprites/backgroundMinigameIntermission.png" id="2_lhmql"]
 
@@ -30,6 +31,28 @@ scale = Vector2(2.4, 2.3935006)
 texture = ExtResource("2_lhmql")
 stretch_mode = 1
 
+[node name="HSlider" type="HSlider" parent="." unique_id=2011830640]
+offset_left = 543.0
+offset_top = 272.0
+offset_right = 993.0
+offset_bottom = 326.0
+max_value = 1.0
+step = 0.1
+ticks_on_borders = true
+script = ExtResource("2_6kysc")
+
+[node name="text" type="RichTextLabel" parent="HSlider" unique_id=2025236169]
+layout_mode = 0
+offset_left = -393.0
+offset_top = -24.0
+offset_right = 120.0
+offset_bottom = 75.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 40
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MainmenuButton" type="TextureButton" parent="." unique_id=214129896]
 offset_left = 448.0
 offset_top = 475.0
@@ -39,15 +62,5 @@ scale = Vector2(2.4000013, 2.4000006)
 texture_normal = ExtResource("1_aaqfp")
 texture_hover = ExtResource("2_j2dne")
 
-[node name="text" type="RichTextLabel" parent="." unique_id=2025236169]
-offset_left = 371.0
-offset_top = 274.0
-offset_right = 884.0
-offset_bottom = 373.0
-theme_override_constants/outline_size = 30
-theme_override_font_sizes/normal_font_size = 40
-text = "There's none :)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
+[connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
 [connection signal="pressed" from="MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

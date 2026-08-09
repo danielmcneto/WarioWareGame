@@ -14,9 +14,9 @@ func _ready() -> void:
 	await Timer(1) # using the function created
 	
 	Global.minigames_done = Global.minigames_done +1
-	var i = RandomNumberGenerator.new().randi_range(1,3)
+	var i = RandomNumberGenerator.new().randi_range(1,4)
 	while i == Global.lastMinigame:
-		i = RandomNumberGenerator.new().randi_range(1,3)
+		i = RandomNumberGenerator.new().randi_range(1,4)
 	
 	Global.lastMinigame = i
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
