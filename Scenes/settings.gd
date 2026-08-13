@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_mainmenu_button_pressed() -> void:
-	Trasition.change_scene("res://scenes/title_screen.tscn")
+	Trasition.change_scene("res://Scenes/title_screen.tscn")
