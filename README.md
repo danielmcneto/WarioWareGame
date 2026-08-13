@@ -16,7 +16,8 @@ A fast-paced Arcade game inspired by WarioWare where players must clear three ra
 * **Instant Onboarding:** Microgames designed around intuitive 5-second mechanics:
   * **Smash the Mosquito:** Precision clicker — track and swat the mosquito before time runs out.
   * **Unclog the Toilet:** Drag-and-pump motion — push the plunger down and up to clear the pipe.
-  * **Bomb Squad:** Defusal puzzle — click the active bombs to disarm them before detonation.
+  * **Bomb Squad:** Multi target clicker — click the active bombs to disarm them before detonation.
+  * **Smash Squash:** Smash clicker — click as fast as you can until clear the level.
 
 ---
 
