@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://kl45ij243oe7" path="res://sprites/mainmenubutton.png" id="4_qjy16"]
 [ext_resource type="Texture2D" uid="uid://cpdrdq5xpm2fa" path="res://sprites/mainmenubuttonH.png" id="5_26hfm"]
 
+[sub_resource type="FontVariation" id="FontVariation_udaet"]
+
 [node name="Gameover" type="Node2D" unique_id=567701376]
 script = ExtResource("1_bb3cs")
 
@@ -41,13 +43,14 @@ texture_normal = ExtResource("4_qjy16")
 texture_hover = ExtResource("5_26hfm")
 
 [node name="Score" type="RichTextLabel" parent="." unique_id=1929260722]
-offset_left = 352.0
-offset_top = 77.0
-offset_right = 708.0
-offset_bottom = 164.0
+offset_left = 203.0
+offset_top = 35.0
+offset_right = 973.0
+offset_bottom = 155.0
 theme_override_constants/outline_size = 30
-theme_override_font_sizes/normal_font_size = 60
-text = "SCORE"
+theme_override_fonts/normal_font = SubResource("FontVariation_udaet")
+theme_override_font_sizes/normal_font_size = 30
+text = "Congrats"
 horizontal_alignment = 1
 vertical_alignment = 1
 

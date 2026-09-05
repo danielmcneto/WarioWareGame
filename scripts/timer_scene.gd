@@ -22,11 +22,6 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Trasition.change_scene("res://Scenes/minigame_" + str(i) + ".tscn") # changes your scene by arranging this frankenstein path. 
 	
-# Above, your script is being told to go to the next minigame. If the 
-# current minigame is Level 1, then you would be on minigame 1. If you 
-# complete that level, you have the minigames_done add one, and then you 
-# look for the scene titled `minigame_` and then whatever minigame number 
-# should be next. Make sure you name your minigame saves appropriately.
 	
 
 func _process(delta: float) -> void: # runs EVERY FRAME
@@ -54,7 +49,7 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 			Trasition.change_scene("res://Scenes/gameover.tscn")
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
-	level_counter.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)
+	level_counter.text = "Level " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
 
 func Timer(start_time: float): # making a new function for timer countdown!
 	# we want the timer to go down, and when it reaches 0 it transitions 

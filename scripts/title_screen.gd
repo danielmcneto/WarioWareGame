@@ -23,7 +23,7 @@ func _on_sart_button_pressed() -> void:
 	await sfx.finished
 	MusicManager.playGameMusic()
 	Trasition.change_scene("res://Scenes/level_scene.tscn")
-	Global.minigames_done = 1
+	Global.minigames_done = 0
 
 
 func _on_setting_button_pressed() -> void:

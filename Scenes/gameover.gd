@@ -5,8 +5,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.minigames_done -= 1
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	scr.text = "Score: " + str(Global.minigames_done)
+	if Global.minigames_done >= 10:
+		scr.text = "Wow look at you with " + str(Global.minigames_done) + " minigames done"
+	else:
+		scr.text = "Ouch it seems like u didnt done that well with " + str(Global.minigames_done) + " minigames done"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
