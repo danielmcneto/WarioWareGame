@@ -46,47 +46,7 @@ scale = Vector2(1.4, 1.64)
 texture_normal = ExtResource("1_enoba")
 script = ExtResource("2_f6tb2")
 
-[node name="bomb2" type="TextureButton" parent="parent" unique_id=1940736083]
-offset_left = 761.0
-offset_top = 158.0
-offset_right = 879.0
-offset_bottom = 290.0
-scale = Vector2(1.4, 1.64)
-texture_normal = ExtResource("1_enoba")
-script = ExtResource("2_f6tb2")
-
-[node name="bomb3" type="TextureButton" parent="parent" unique_id=1653851924]
-offset_left = 584.0
-offset_top = 338.0
-offset_right = 702.0
-offset_bottom = 470.0
-scale = Vector2(1.4, 1.64)
-texture_normal = ExtResource("1_enoba")
-script = ExtResource("2_f6tb2")
-
-[node name="bomb4" type="TextureButton" parent="parent" unique_id=249268132]
-offset_left = 104.0
-offset_top = 478.0
-offset_right = 222.0
-offset_bottom = 610.0
-scale = Vector2(1.4, 1.64)
-texture_normal = ExtResource("1_enoba")
-script = ExtResource("2_f6tb2")
-
-[node name="bomb5" type="TextureButton" parent="parent" unique_id=1429667577]
-offset_left = 411.0
-offset_top = 364.0
-offset_right = 529.0
-offset_bottom = 496.0
-scale = Vector2(1.4, 1.64)
-texture_normal = ExtResource("1_enoba")
-script = ExtResource("2_f6tb2")
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="parent" unique_id=487020672]
 stream = ExtResource("7_ojqsy")
 
 [connection signal="pressed" from="parent/bomb" to="parent/bomb" method="_on_pressed"]
-[connection signal="pressed" from="parent/bomb2" to="parent/bomb2" method="_on_pressed"]
-[connection signal="pressed" from="parent/bomb3" to="parent/bomb3" method="_on_pressed"]
-[connection signal="pressed" from="parent/bomb4" to="parent/bomb4" method="_on_pressed"]
-[connection signal="pressed" from="parent/bomb5" to="parent/bomb5" method="_on_pressed"]

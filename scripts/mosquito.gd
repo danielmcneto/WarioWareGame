@@ -1,5 +1,5 @@
 extends Area2D
-@onready var max_vel = 1000 * Global.minigames_done
+@onready var max_vel = 700 * Global.minigames_done
 @onready var smooth = 2
 
 @onready var screen_size = get_viewport_rect().size
@@ -15,6 +15,9 @@ var target_vel = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	if max_vel >= 2000:
+		max_vel = 2000
 	_change_dir()
 	position.x = randomX
 	position.y = randomY

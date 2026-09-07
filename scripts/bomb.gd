@@ -7,8 +7,6 @@ var randomY = randi_range(140, 445)
 
 func _ready() -> void:
 	randomize() # Prepara a semente aleatória global do jogo
-
-func _init() -> void:
 	position.x = randomX
 	position.y = randomY
 
