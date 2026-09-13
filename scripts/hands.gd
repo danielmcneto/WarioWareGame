@@ -50,7 +50,10 @@ func _check_hit() -> void:
 	
 func _check_win() -> void:
 	if hited:
+		await get_tree().create_timer(0.5).timeout
+		
 		WinSfx.playWinSFX()
+		
 		Trasition.change_scene("res://Scenes/win_scene.tscn")
 	
 func _smack() -> void:

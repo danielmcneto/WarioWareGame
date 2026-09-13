@@ -24,7 +24,7 @@ func Spawn_bomb() -> void:
 	new_bomb.visible = true
 
 func _process(delta: float) -> void:
-	if buttons_pressed == Global.minigames_done * 0.5:
+	if buttons_pressed >= Global.minigames_done * 0.5:
 		WinSfx.playWinSFX()
 		Trasition.change_scene("res://Scenes/win_scene.tscn")
 	

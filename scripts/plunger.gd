@@ -28,7 +28,10 @@ func _process(_delta: float) -> void:
 			
 		if ready_to_dive and position.y >= limit_bottom - 20:
 			if plungeds >= 0.5 * Global.minigames_done:
+				await get_tree().create_timer(0.5).timeout
+				
 				WinSfx.playWinSFX()
+				
 				Trasition.change_scene("res://Scenes/win_scene.tscn")
 				return
 			sfx.play()

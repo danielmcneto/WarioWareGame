@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bt2pj87t2nrt1"]
+
+[ext_resource type="Script" uid="uid://cgdxxhxgolfjd" path="res://Scenes/enemy_car.gd" id="1_850ld"]
+[ext_resource type="Texture2D" uid="uid://clauh6giu1usb" path="res://sprites/car.png" id="2_850ld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(153, 150)
+
+[node name="enemyCar" type="Area2D" unique_id=104073469]
+script = ExtResource("1_850ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866144446]
+position = Vector2(66.5, 32)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1164409379]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_850ld")

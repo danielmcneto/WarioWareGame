@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 	
 func _check_win() -> void:
 	if clicks >= 0.5 * Global.minigames_done:
+		await get_tree().create_timer(0.5).timeout
 		can_swing = false
 		WinSfx.playWinSFX()
 		Trasition.change_scene("res://Scenes/win_scene.tscn")
@@ -58,7 +59,6 @@ func _smack() -> void:
 		.set_ease(Tween.EASE_OUT)
 	tween.tween_interval(0.1)
 	tween.tween_callback(func(): hit_effect.visible = false)
-	tween.tween_interval(0.3)
 	
 	tween.tween_callback(_check_win)
 	
